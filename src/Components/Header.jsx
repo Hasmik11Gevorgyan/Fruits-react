@@ -21,7 +21,7 @@ function Header(){
 
     return <div className="navbar">
         <div className="name"> FOODY</div>
-        <Link to="/" className ="link">Home</Link>
+        <Link to="/" className ="link">   Home</Link>
         <Link to="/Fruits" className="link">Fruits</Link>
         <Link to="/Vegetables" className="link">Vegetbles</Link>
         <Link to="/Fresh" className="link">Fresh</Link>

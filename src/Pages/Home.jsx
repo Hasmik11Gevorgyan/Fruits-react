@@ -1,5 +1,6 @@
 import { Carousel } from "react-responsive-carousel";
-
+import ReadMore from "../Components/ReadMore";
+import { Link } from "react-router-dom";
 function Home(){
     
 return <div>
@@ -15,25 +16,21 @@ return <div>
 <h2 className="top"> ORGANIC FOOD IS
     ALWAYS HEALTY</h2>
 <button className="button">Products</button>
-<button className="button"> Services</button>
+  <button className="button"> Services</button>
 </div>
 
 
 <div className="body-image1">
 <h2 className="top"> Products are always fresh</h2>
-<button className="button">Products</button>
-<button className="button"> Services</button>
+<Link  to="/product"     > <button className="button">Products</button> </Link>
+
+<Link to="/servise" className ="link"> <button className="button"> Services  </button>  </Link>
+
 </div>
 
 
 
 </Carousel>
-
-
-
-
-
-
 
 
 <div className="imgText">
@@ -53,7 +50,8 @@ return <div>
                 Aliqu diam amet diam et eos
 
                 Clita duo justo magna dolore erat amet</h5>
-            <button className="Read">Read More</button>
+                
+                <Link to="/ReadMore" className ="link">  <button className="button">Read More </button>  </Link>
         </div>
     </div>
 
@@ -69,7 +67,7 @@ return <div>
 
             Tempor erat elitr rebum at clita
             Clita erat ipsum et lorem et s</h2>
-        <button className="visitButton">Visit Now</button>
+            <Link to="/visit" className ="link"> <button className="visitButton">Visit Now</button> </Link>
     </div>
     </div>
 }

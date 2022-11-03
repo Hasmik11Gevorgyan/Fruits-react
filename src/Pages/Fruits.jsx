@@ -10,9 +10,11 @@ function Fruits() {
   
   return (
     <div className="Fruits">
-      {fruitsState.map((fruits) => (
-        <SingleFruit title={fruits.title} imgSrc={fruits.img} key={fruits.id}/>
-      ))}
+      {fruitsState
+      .filter((fruit) => ( fruit.tip== "fruit"))
+      .map((fruit)=>{
+        <SingleFruit title={fruit.title} imgSrc={fruit.img} key={fruit.id}/>
+      })}
     </div>
   );
 }
