@@ -1,0 +1,26 @@
+.Basket{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.basket-header{
+width: 90%;
+height: 80px;
+background-color: #777;
+color:#73d700;
+font-size: 40px;
+display: flex;
+justify-content: space-around;
+margin-left: 100px;
+}
+.basket-footer{
+    margin-left: 100px;
+    width: 90%;
+    height: 80px;
+    background-color: #777;
+    color:#73d700;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;  
+}
