@@ -1,40 +1,51 @@
-import {Link} from "react-router-dom";
-import fruits from "../DATA";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
+const light = {
+    backgroundColor : "white"
+  }
+  const dark = {
+    backgroundColor : "#555464",
+  }
 
-function Header(){
-    // const [fruits,setFruits]=useState[fruits]
-    // const [inputValue,setInputValue]=useState[0]
-//     useEffect(()=>{
-//         if(inputValue.length > 2){
-//           setFruits(fruits.filter((val) => fruits.title.includes(inputValue))).map((val)=>{
-//  return(<div> <h3>{val.title}</h3>
-//               key={val.id} 
-//              <img src= {val.image}/> 
-             
-//              </div> 
-//              )
-//           })
-        
-//         }
-//       },[inputValue])
-
-    return <div className="navbar">
-        <div className="name"> FOODY</div>
-        <Link to="/" className ="link">   Home</Link>
-        <Link to="/Fruits" className="link">Fruits</Link>
-        <Link to="/Vegetables" className="link">Vegetbles</Link>
-        <Link to="/Fresh" className="link">Fresh</Link>
-        <div class="search">
-                <input  type="text" placeholder="search" 
-                // onChange={(e)=> setInputValue(e.target.value)}
-                // value = {inputValue}
-        
-         />
-                <button className="button"> Buy</button>
-            </div>
-    </div>
+function Header() {
+    const [screenMode,setScreenMode] = useState(light);
     
+      const darkMode = ()=>{
+        setScreenMode(dark)
+      }
+      const lightMode = ()=>{
+        setScreenMode(light)
+      }
+  return (
+    <div className="navbar" style={screenMode}>
+      <Link to="/" className="link">
+      <div className="name"> FOODY</div>
+      </Link>
+      <Link to="/" className="link">
+        Home
+      </Link>
+      <Link to="/Fruits" className="link">
+        Fruits
+      </Link>
+      <Link to="/Vegetables" className="link">
+        Vegetbles
+      </Link>
+      <Link to="/Fresh" className="link">
+        Fresh
+      </Link>
+      <div className="shop">
+        <span className="my_shop">My Shopping</span>
+        <div className="cart">
+          
+          <span>0</span>
+      </div>
+      </div>
+      <div className="search">
+        <button className="button" onClick={darkMode }> Dark/Light</button>
+      </div>
+    </div>
+  );
 }
 
 export default Header;

@@ -1,4 +1,9 @@
+import { useState } from "react"
 function Footer(){
+    const [inputValue,setInputValue] = useState("")
+const changeInput=(val)=>{
+    setInputValue(val)
+}
     return <footer className="footer">
     <div>
         <h2>Foody</h2>
@@ -26,7 +31,7 @@ function Footer(){
     </div>
     <div>
         <h2>newsLetter</h2>
-        <input className="input1"/>
+        <input className="input1"  value={inputValue} onChange={(e)=>{changeInput(e.target.setInputvalue)} }/>
         <button className="button"> Enter</button>
 
     </div>

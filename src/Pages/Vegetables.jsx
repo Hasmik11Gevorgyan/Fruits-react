@@ -1,19 +1,38 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SingleFruit from "../Components/Singlefruit";
 import fruits from "../DATA";
 
-function Vegetables(val){
-    const [VegetablesList, setVegetablesList] = useState([...fruits]);
-
-      return (
-        <div className="Vegetables">
-          {VegetablesList
-          .filter((val) =>  fruits.tip== "vegetables")
-          .map((val)=>{
-            <SingleFruit title={fruits.title} imgSrc={fruits.img} key={fruits.id}/>
-          })}
+function Vegetables() {
+  const [vegetablesState, setVegetablesState] = useState([...fruits]);
+  const [inputValue,setInputValue] = useState("");
+  const changeInput = (val)=>{
+    setInputValue(val)
+  }
+  const search = ()=>{
+    setVegetablesState(vegetablesState.filter(val => val.title.toLowerCase().includes(inputValue)));
+    setInputValue("");
+  }
+  return (
+    <div>
+      <div className="searchbtn">
+       <input className="searchinput" value={inputValue} onChange={(e)=>changeInput(e.target.value)}/>
+      <button className="searchbutton" onClick={search}>Search</button>
+      </div>
+      <div className="Fresh">
+      {vegetablesState
+        .filter((veg) => veg.tip == "vegetables")
+        .map((veg) => {
+          return (
+            <SingleFruit
+              title={veg.title}
+              imgSrc={veg.img}
+              key={veg.id}
+            />
+          );
+        })}
         </div>
-      );
-    }
-    
-    export default Vegetables;
+    </div>
+  );
+}
+
+export default Vegetables;

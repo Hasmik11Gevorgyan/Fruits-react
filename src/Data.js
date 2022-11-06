@@ -3,7 +3,7 @@ import Fruits from "./Pages/Fruits";
 const fruits = [
     {
       id: 1,
-      title: "Açaí  Powerful Antioxidant",
+      title: "blueberry",
       price : "2$",
       tip:"fruit",
       img: "https://www.santosfood.com/wp-content/uploads/2019/11/1-1.png?480x357",
@@ -11,7 +11,7 @@ const fruits = [
     },
     {
       id: 2,
-      title: "Açaí  Powerful Antioxidant",
+      title: "tomato",
       price : "3$",
       tip:"vegetables",
       img: "https://www.santosfood.com/wp-content/uploads/2020/01/3-2-500x355.png?500x355",
@@ -19,7 +19,7 @@ const fruits = [
     },
     {
         id: 3,
-        title: "Cajá",
+        title: "dogwood",
         price : "2$",
         tip:"fruit",
         img: "https://www.santosfood.com/wp-content/uploads/2020/01/6-500x355.png?500x355",
@@ -35,7 +35,7 @@ const fruits = [
     },
     {
         id: 5,
-        title: "Coconut Water",
+        title: "Coconut ",
         price : "8$",
         tip:"fruit",
         img: "https://www.santosfood.com/wp-content/uploads/2020/01/1-3-500x355.png?500x355",
@@ -43,7 +43,7 @@ const fruits = [
     },
     {
         id: 6,
-        title: "Guaraná Rich in Caffeine",
+        title: " Caffeine",
         price : "2$",
         tip:"fruit",
         img: "https://www.santosfood.com/wp-content/uploads/2020/01/img-5-500x372.jpg?500x372",
@@ -51,7 +51,7 @@ const fruits = [
     },
     {
         id: 7,
-        title: "Guva",
+        title: "Guаva",
         price : "2$",
         tip:"fruit",
         img: "https://www.santosfood.com/wp-content/uploads/2020/01/4-4-500x355.jpg?500x355",
@@ -91,7 +91,7 @@ const fruits = [
     },
     {
         id: 12,
-        title: "English XL Cauliflower",
+        title: "English  Cauliflower",
         price : "3.30$",
         tip:"vegetables",
         img: "https://cdn.shopify.com/s/files/1/0562/4551/8525/products/Cauliflower_600x.jpg?v=1651081424",
@@ -109,21 +109,21 @@ const fruits = [
         id: 14,
         title: "Iceberg Lettuce",
         price : "7.30$",
-        tip:"fruit",
+        tip:"vegetables",
         img: "https://cdn.shopify.com/s/files/1/0562/4551/8525/products/Iceberg-Lettuce_600x.jpg?v=1618438756",
         fresh: "false"
     },
     {
         id: 15,
-        title: "English Fresh Dug Carrots",
+        title: " Carrots",
         price : "1.20$",
-        tip:"fruit",
+        tip:"vegetables",
         img: "https://cdn.shopify.com/s/files/1/0562/4551/8525/products/Loose-Carrots_600x.jpg?v=1618438777",
         fresh: "true"
     },
     {
         id: 16,
-        title: "English Spring onions",
+        title: "Onions",
         price : "0.30$",
         tip:"vegetables",
         img: "https://cdn.shopify.com/s/files/1/0562/4551/8525/products/Spring-Onions-1_600x.jpg?v=1618438858",
