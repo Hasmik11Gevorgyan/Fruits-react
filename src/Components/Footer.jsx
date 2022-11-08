@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 function Footer(){
     const [inputValue,setInputValue] = useState("")
 const changeInput=(val)=>{
@@ -31,7 +32,7 @@ const changeInput=(val)=>{
     </div>
     <div>
         <h2>newsLetter</h2>
-        <input className="input1"  value={inputValue} onChange={(e)=>{changeInput(e.target.setInputvalue)} }/>
+        <Link to="/register" className="link"> Sign in  </Link>
         <button className="button"> Enter</button>
 
     </div>

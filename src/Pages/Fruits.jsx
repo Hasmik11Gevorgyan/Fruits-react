@@ -1,12 +1,10 @@
-
 import { useState } from "react";
 import SingleFruit from "../Components/Singlefruit";
-import fruits from "../DATA";
 
-function Fruits() {
+
+function Fruits({addToCard,fruits}) {
   const [fruitsState, setFruitsState] = useState([...fruits]);
   const [inputValue, setInputValue] = useState("");
-  
   
   const changeInput = (val) => {
     setInputValue(val)
@@ -29,8 +27,9 @@ function Fruits() {
               <SingleFruit
                 title={fruit.title}
                 imgSrc={fruit.img}
+                id={fruit.id}
                 key={fruit.id}
-                
+                addToCard={addToCard}
               />
             );
           })}

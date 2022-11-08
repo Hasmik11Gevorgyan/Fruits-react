@@ -1,8 +1,7 @@
 import { useState } from "react";
 import SingleFruit from "../Components/Singlefruit";
-import fruits from "../DATA";
 
-function Vegetables() {
+function Vegetables({addToCard,fruits}) {
   const [vegetablesState, setVegetablesState] = useState([...fruits]);
   const [inputValue,setInputValue] = useState("");
   const changeInput = (val)=>{
@@ -25,8 +24,10 @@ function Vegetables() {
           return (
             <SingleFruit
               title={veg.title}
+              id={veg.id}
               imgSrc={veg.img}
               key={veg.id}
+              addToCard={addToCard}
             />
           );
         })}

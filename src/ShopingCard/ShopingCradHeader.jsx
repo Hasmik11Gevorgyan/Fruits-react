@@ -1,6 +1,6 @@
-import  "./RicycleBin.css"
+import  "./ShopingCard.css"
 
-function RicycleBinHeader(){
+function ShopingCardHeader(){
     return <div>
 <h3 className="basket-header"> Recycle bin </h3>
 <div className="basket-header">
@@ -12,4 +12,4 @@ function RicycleBinHeader(){
 
     </div>
 }
-export default RicycleBinHeader;
+export default ShopingCardHeader;

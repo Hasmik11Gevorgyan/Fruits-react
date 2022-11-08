@@ -2,47 +2,41 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const light = {
-    backgroundColor : "white"
-  }
-  const dark = {
-    backgroundColor : "#555464",
-  }
+  backgroundColor: "white",
+};
+const dark = {
+  backgroundColor: "#555464",
+};
 
 function Header() {
-    const [screenMode,setScreenMode] = useState(light);
-    
-      const darkMode = ()=>{
-        setScreenMode(dark)
-      }
-      const lightMode = ()=>{
-        setScreenMode(light)
-      }
+  const [screenMode, setScreenMode] = useState(light);
+
+  const mode = () => {
+    setScreenMode(screenMode=>screenMode == dark?light:dark);
+  };
+ 
   return (
     <div className="navbar" style={screenMode}>
       <Link to="/" className="link">
-      <div className="name"> FOODY</div>
+        <div className="name"> FOODY</div>
       </Link>
       <Link to="/" className="link">
         Home
       </Link>
-      <Link to="/Fruits" className="link">
+      <Link to="/fruits" className="link">
         Fruits
       </Link>
-      <Link to="/Vegetables" className="link">
+      <Link to="/vegetables" className="link">
         Vegetbles
       </Link>
-      <Link to="/Fresh" className="link">
+      <Link to="/fresh" className="link">
         Fresh
       </Link>
-      <div className="shop">
-        <span className="my_shop">My Shopping</span>
-        <div className="cart">
-          
-          <span>0</span>
-      </div>
-      </div>
+      <Link to="/shoppingCard" className="link">My Shopping</Link>
       <div className="search">
-        <button className="button" onClick={darkMode }> Dark/Light</button>
+        <button className="button" onClick={mode}>
+          Dark/Light
+        </button>
       </div>
     </div>
   );
