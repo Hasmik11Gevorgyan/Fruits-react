@@ -215,7 +215,8 @@ ul {
     height: 400px;
     display: flex;
     flex-direction: row;
-    margin-top: 300px;
+    flex-wrap: wrap;
+    margin-top: 150px;
     border-radius: 15px;
     padding: 30px;
     background-color: #666;
@@ -228,12 +229,14 @@ ul {
 
 }
 .aboutus{
-    width: 550px;
-    position:relative;
-     top: 200px;
-     right: 500px;
+   margin-bottom: 100px;
+    width: 700px;
+   display: flex;
     font-size: 55px;
     color: rgb(152, 206, 27);
+    align-items: center;
+    position: relative;
+    top: 150px;
 }
 .Fruits{
     display: flex;

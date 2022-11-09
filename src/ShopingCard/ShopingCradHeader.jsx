@@ -2,7 +2,7 @@ import  "./ShopingCard.css"
 
 function ShopingCardHeader(){
     return <div>
-<h3 className="basket-header"> Recycle bin </h3>
+<h3 className="basket-header"> Shopping Card </h3>
 <div className="basket-header">
 <div>Name</div> 
 <div>Count</div>

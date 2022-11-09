@@ -3,16 +3,14 @@ import ReadMore from "../Components/ReadMore";
 import { Link, useNavigate } from "react-router-dom";
 
 function Home() {
-    let  navigate = useNavigate();
-    function handleClick(){
-      navigate("/product")
-    }
-  }
+    // let  navigate = useNavigate();
+    // function handleClick(){
+    //   navigate("/product")
+    // }
+  
   return (
     <div >
       <Carousel >
-        <button  className="button" 
-        onClick={handleClick()}>Product</button>
         <div className="body-image">
           <h2 className="top"> ORGANIC FOOD IS ALWAYS HEALTY</h2>
         </div>
@@ -59,6 +57,6 @@ function Home() {
         </Link>
       </div>
     </div>
-  );
+  );}
 
 export default Home;

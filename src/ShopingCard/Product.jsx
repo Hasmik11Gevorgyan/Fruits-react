@@ -9,7 +9,7 @@ function Product({handleClick}) {
 
   
   return (
-    <div className="Products">
+    <div className="products">
       {productState.map((fruits) => (
         <SingleFruit title={fruits.title} imgSrc={fruits.img} key={fruits.id} handleClick={handleClick}/>
       ))}

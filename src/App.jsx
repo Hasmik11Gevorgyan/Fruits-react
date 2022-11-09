@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Home from "./Pages/Home";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Fruits from "./Pages/Fruits";
 import Fresh from "./Pages/Fresh";
 import Vegetables from "./Pages/Vegetables";
@@ -12,7 +12,9 @@ import ShopingCard from "./ShopingCard/ShopingCard";
 import ReadMore from "./Components/ReadMore";
 import Visit from "./Components/Visit";
 import fruits from "./DATA";
-import Register from "./Components/Register";
+import Form from "./Components/form";
+import Product from "./ShopingCard/Product";
+import ShoppingCardComponent from "./Components/ShoppingCardComponent";
 
 
 function App() {
@@ -29,10 +31,10 @@ function App() {
           <Route path="/fruits" element={<Fruits addToCard={addToCard} fruits={data}/>} />
           <Route path="/vegetables" element={<Vegetables addToCard={addToCard} fruits={data}/>} />
           <Route path="/fresh" element={<Fresh addToCard={addToCard} fruits={data}/>} />
-          <Route path="/shoppingCard" element={<RicycleBin shoppingData={shoppingData}/>} />
+          <Route path="/shoppingCard" element={<ShoppingCardComponent shoppingData={shoppingData}/>} />
           <Route path="/ReadMore" element={<ReadMore />} />
           <Route path="/visit" element={<Visit />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/form" element={<Form />} />
           <Route path="/product" element={<Product />} />
         </Route>
       </Routes>
